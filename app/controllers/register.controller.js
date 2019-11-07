@@ -29,6 +29,7 @@ exports.create = (req, res) => {
     });
 };
 
+
 exports.findAll = (req, res) => {
   Register.find()
     .then(register => {
