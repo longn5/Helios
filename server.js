@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.urlencoded({ extended:true}))
 app.use(bodyParser.json())
@@ -22,10 +22,12 @@ mongoose.connect(dbConfig.url, {
     process.exit();
 })
 
-app.get('/', (req, res) => {
-    res.json({"message": "simple route"})
+//test route
+app.get('/test', (req, res) => {
+    res.send({"express": "this is a test"})
 });
 
+//imports routes
 require('./app/routes/register.routes.js')(app);
 
 app.listen(PORT, () => {

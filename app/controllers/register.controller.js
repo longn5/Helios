@@ -32,7 +32,7 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
   Register.find()
     .then(register => {
-      res.send(register);
+    res.send(register);
     })
     .catch(err => {
       res.status(500).send({
