@@ -1,0 +1,27 @@
+.registrant{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.reg-table{
+  background: #34495E;
+  color: #fff;
+  border-radius: .4em;
+}
+
+th{
+    text-align: left;
+    width: 150px;
+    padding: 1em;
+    color: #dd5;
+}
+
+td{
+    padding:1em;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(151, 154, 157, 0.427);
+}
+tr:nth-child(odd) {
+    background-color: rgba(14, 43, 71, 0.427);
+}
